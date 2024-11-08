@@ -81,7 +81,7 @@ importers:
         specifier: 3.2.3
         version: 3.2.3
 
-  packages/suwujs:
+  packages/x-dev-tools:
     dependencies:
       '@suwujs/logger':
         specifier: workspace:*
