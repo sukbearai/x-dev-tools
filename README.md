@@ -18,4 +18,4 @@ pnpm add @suwujs/x-dev-tools
 
 |名称|描述|
 |---|---|
-|[@dev-tools/logger](https://github.com/wechatferry/wechatferry/tree/main/packages/core)| 日志功能模块 |
+|[@dev-tools/logger](https://github.com/sukbearai/x-dev-tools/tree/main/packages/logger)| 日志功能模块 |
