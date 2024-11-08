@@ -1,0 +1,82 @@
+{
+  "cSpell.words": [
+    "aeskey",
+    "appattach",
+    "appmsg",
+    "aters",
+    "atuserlist",
+    "cdnattachurl",
+    "cdnbigimgurl",
+    "cdnmidimgurl",
+    "cdnthumburl",
+    "cdnurl",
+    "cdnvideourl",
+    "impls",
+    "Mgmt",
+    "MICROVIDEO",
+    "msgsource",
+    "Oneof",
+    "openim",
+    "POSSIBLEFRIEND",
+    "protoc",
+    "qmessage",
+    "removee",
+    "roomid",
+    "rustup",
+    "SHARECARD",
+    "slik",
+    "STATUSNOTIFY",
+    "SYSNOTICE",
+    "taid",
+    "tfid",
+    "thumburl",
+    "tmessage",
+    "totallen",
+    "VERIFYMSG",
+    "videomsg",
+    "voicemsg",
+    "VOIPINVITE",
+    "VOIPMSG",
+    "VOIPNOTIFY",
+    "wechatferry",
+    "wxids",
+    "wxmsg"
+  ],
+
+  // Disable the default formatter
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+  "eslint.useFlatConfig": true,
+
+  // Auto fix
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+  // Silent the stylistic rules in you IDE, but still auto fix them
+  "eslint.rules.customizations": [
+    { "rule": "@stylistic/*", "severity": "off" },
+    { "rule": "style*", "severity": "off" },
+    { "rule": "*-indent", "severity": "off" },
+    { "rule": "*-spacing", "severity": "off" },
+    { "rule": "*-spaces", "severity": "off" },
+    { "rule": "*-order", "severity": "off" },
+    { "rule": "*-dangle", "severity": "off" },
+    { "rule": "*-newline", "severity": "off" },
+    { "rule": "*quotes", "severity": "off" },
+    { "rule": "*semi", "severity": "off" }
+  ],
+
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml"
+  ]
+}

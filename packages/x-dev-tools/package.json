@@ -1,0 +1,32 @@
+{
+  "name": "suwujs",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "some basic developing tools",
+  "author": "suk.bear <suk.bear.suwu@gmail.com>",
+  "license": "MIT",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.mjs"
+    },
+    "./logger": {
+      "types": "./dist/logger.d.ts",
+      "default": "./dist/logger.mjs"
+    }
+  },
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub"
+  },
+  "dependencies": {
+    "@suwujs/logger": "workspace:*"
+  }
+}

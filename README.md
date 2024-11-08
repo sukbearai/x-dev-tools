@@ -1,0 +1,25 @@
+<br>
+
+<p align="center">
+<img src="https://api.iconify.design/fluent-emoji:dog-face.svg" style="width:100px;" />
+</p>
+
+## suwujs
+
+常用的开发工具和 UI 组件库,使用 pnpm monorepo 管理。
+
+## 云效制品库
+
+[发包和依赖安装](https://packages.aliyun.com/npm/npm-registry/guide)
+
+## 安装
+
+```bash
+pnpm add suwujs
+```
+
+## Packages
+
+|名称|描述|
+|---|---|
+|[@dev-tools/logger](https://github.com/wechatferry/wechatferry/tree/main/packages/core)| 日志功能模块 |
