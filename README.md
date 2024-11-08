@@ -4,18 +4,14 @@
 <img src="https://api.iconify.design/fluent-emoji:dog-face.svg" style="width:100px;" />
 </p>
 
-## suwujs
+## x-dev-tools
 
-常用的开发工具和 UI 组件库,使用 pnpm monorepo 管理。
-
-## 云效制品库
-
-[发包和依赖安装](https://packages.aliyun.com/npm/npm-registry/guide)
+常用的开发工具和 UI 组件库,使用 pnpm monorepo 管理
 
 ## 安装
 
 ```bash
-pnpm add suwujs
+pnpm add @suwujs/x-dev-tools
 ```
 
 ## Packages

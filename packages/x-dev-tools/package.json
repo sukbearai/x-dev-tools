@@ -1,5 +1,5 @@
 {
-  "name": "suwujs",
+  "name": "@suwujs/x-dev-tools",
   "type": "module",
   "version": "0.0.1",
   "description": "some basic developing tools",
