@@ -5,6 +5,12 @@
   "description": "some basic developing tools",
   "author": "suk.bear <suk.bear.suwu@gmail.com>",
   "license": "MIT",
+  "homepage": "https://github.com/sukbearai/x-dev-tools#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sukbearai/x-dev-tools"
+  },
+  "bugs": "https://github.com/sukbearai/x-dev-tools/issues",
   "sideEffects": false,
   "exports": {
     ".": {
