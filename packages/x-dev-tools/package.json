@@ -20,6 +20,14 @@
     "./logger": {
       "types": "./dist/logger.d.ts",
       "default": "./dist/logger.mjs"
+    },
+    "./preset": {
+      "types": "./dist/preset.d.ts",
+      "default": "./dist/preset.mjs"
+    },
+    "./utils": {
+      "types": "./dist/utils.d.ts",
+      "default": "./dist/utils.mjs"
     }
   },
   "main": "dist/index.mjs",
