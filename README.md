@@ -22,7 +22,7 @@ pnpm add x-dev-tools
 
 |名称|描述|
 |---|---|
-|[@dev-tools/logger](https://github.com/sukbearai/x-dev-tools/blob/main/packages/logger)| 日志包 |
-|[@dev-tools/ui](https://github.com/sukbearai/x-dev-tools/blob/main/packages/preset)| 预设样式包 |
-|[@dev-tools/ui](https://github.com/sukbearai/x-dev-tools/blob/main/packages/ui)| 物料包 |
-|[@dev-tools/ui](https://github.com/sukbearai/x-dev-tools/blob/main/packages/utils)| 工具包 |
+|[@suwujs/logger](https://github.com/sukbearai/x-dev-tools/blob/main/packages/logger)| 日志包 |
+|[@suwujs/preset](https://github.com/sukbearai/x-dev-tools/blob/main/packages/preset)| 预设样式包 |
+|[@suwujs/ui](https://github.com/sukbearai/x-dev-tools/blob/main/packages/ui)| 物料包 |
+|[@suwujs/utils](https://github.com/sukbearai/x-dev-tools/blob/main/packages/utils)| 工具包 |
