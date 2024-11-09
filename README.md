@@ -8,10 +8,6 @@
 
 常用开发工具集和物料组件库,使用 pnpm monorepo 管理。
 
-## 云效制品库
-
-[发包和依赖安装](https://packages.aliyun.com/npm/npm-registry/guide)
-
 ## 安装
 
 ```bash
