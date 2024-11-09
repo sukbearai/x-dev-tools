@@ -7,6 +7,9 @@
     ],
     "module": "esnext",
     "moduleResolution": "Bundler",
+    "paths": {
+      "@/*": ["./packages/ui/src/*"]
+    },
     "resolveJsonModule": true,
     "types": [
       "node"

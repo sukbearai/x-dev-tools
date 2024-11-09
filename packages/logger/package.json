@@ -1,7 +1,7 @@
 {
   "name": "@suwujs/logger",
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.0.10",
   "description": "dev logger",
   "author": "suk.bear <suk.bear.suwu@gamil.com>",
   "license": "MIT",
@@ -37,6 +37,6 @@
     "dev": "unbuild --stub"
   },
   "dependencies": {
-    "consola": "3.2.3"
+    "consola": "catalog:"
   }
 }

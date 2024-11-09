@@ -1,1 +1,1 @@
-export const name = 'suwujs'
+export const name = 'x-dev-tools'

@@ -1,7 +1,7 @@
 {
   "name": "@suwujs/x-dev-tools",
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.0.10",
   "description": "some basic developing tools",
   "author": "suk.bear <suk.bear.suwu@gmail.com>",
   "license": "MIT",
@@ -33,6 +33,8 @@
     "dev": "unbuild --stub"
   },
   "dependencies": {
-    "@suwujs/logger": "workspace:*"
+    "@suwujs/logger": "workspace:*",
+    "@suwujs/preset": "workspace:*",
+    "@suwujs/utils": "workspace:*"
   }
 }

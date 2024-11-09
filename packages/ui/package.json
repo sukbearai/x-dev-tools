@@ -1,0 +1,62 @@
+{
+  "name": "@suwujs/ui",
+  "type": "module",
+  "version": "0.0.10",
+  "description": "vue3 component library",
+  "author": "suk.bear <suk.bear.suwu@gamil.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/sukbearai/x-dev-tools#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sukbearai/x-dev-tools"
+  },
+  "bugs": "https://github.com/sukbearai/x-dev-tools/issues",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    },
+    "./ui.css": "./dist/ui.css",
+    "./element-ui-plus.css": "./dist/style.css",
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js"
+    }
+  },
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite build -w & pnpm uno-watch",
+    "build": "vite build && pnpm uno",
+    "uno": "unocss -m",
+    "uno-watch": "unocss -w"
+  },
+  "dependencies": {
+    "@suwujs/preset": "workspace:*",
+    "@suwujs/utils": "workspace:*",
+    "element-plus": "catalog:"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "catalog:",
+    "typescript": "catalog:",
+    "unocss": "catalog:",
+    "unplugin-element-plus": "catalog:",
+    "vite": "catalog:",
+    "vue": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}

@@ -1,28 +1,31 @@
+import type { DefaultTheme } from 'vitepress'
 import { defineConfig } from 'vitepress'
+
+const Components: DefaultTheme.SidebarItem[] = [
+  {
+    text: '基础',
+    collapsed: false,
+    items: [
+      { text: 'Button', link: '/components/button' },
+      { text: 'ElButtonGroups', link: '/components/ElButtonGroups' },
+      // { text: 'Link', link: '/components/link' },
+      // { text: 'Text', link: '/components/text' },
+    ],
+  },
+]
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "x-dev-tools",
-  description: "x-dev-tools",
+  title: 'x-dev-tools',
+  description: 'x-dev-tools',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
-    ],
 
     sidebar: [
       {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
+        text: '组件',
+        items: Components,
+      },
     ],
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
+  },
 })

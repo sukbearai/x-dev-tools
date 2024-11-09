@@ -1,7 +1,7 @@
 {
   "name": "docs",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.10",
   "private": true,
   "scripts": {
     "docs:dev": "vitepress dev",
@@ -9,12 +9,15 @@
     "docs:preview": "vitepress preview"
   },
   "dependencies": {
-    "unocss": "^0.64.0"
+    "@suwujs/ui": "workspace:*",
+    "floating-vue": "catalog:"
   },
   "devDependencies": {
     "@iconify-json/carbon": "catalog:",
     "@iconify-json/logos": "^1.1.44",
     "@shikijs/vitepress-twoslash": "^1.16.1",
+    "@suwujs/preset": "workspace:*",
+    "unocss": "catalog:",
     "unplugin-vue-components": "^0.27.4",
     "vitepress": "catalog:",
     "vitepress-plugin-group-icons": "catalog:"
