@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, useAttrs, useSlots } from 'vue'
 import { buttonProps } from './props'
-import type { SizeType } from '@/composables/useProps.ts'
+import type { SizeType } from '@/composables/useProps'
 
 defineOptions({
   name: 'XButton',

@@ -48,3 +48,4 @@ catalog:
   vue: ^3.4.37
   vite: ^5.4.10
   vue-flow-layout: ^0.1.1
+  vite-plugin-dts: ^4.3.0

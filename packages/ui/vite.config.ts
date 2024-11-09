@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import UnoCSS from 'unocss/vite'
 import ElementPlus from 'unplugin-element-plus/vite'
+import dts from 'vite-plugin-dts'
 
 const r = (path: string) => resolve(__dirname, path)
 
@@ -12,6 +13,7 @@ export default defineConfig({
     vue(),
     UnoCSS(),
     ElementPlus({}),
+    dts({ rollupTypes: true }),
   ],
   resolve: {
     alias: {
