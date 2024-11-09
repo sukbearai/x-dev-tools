@@ -7,18 +7,18 @@ outline: deep
 依赖安装:
 
 ```bash [pnpm]
-pnpm i -D unocss @suwjs/ui @suwjs/preset
+pnpm i -D unocss @suwujs/ui @suwujs/preset
 ```
 
 在 Vue 项目中使用 XUI 组件库:
 
 ```ts
 // math.ts
-import XUI from '@suwjs/ui'
+import XUI from '@suwujs/ui'
 import { createApp } from 'vue'
 import App from './App.vue'
 import 'uno.css'
-import '@suwjs/ui/ui.css'
+import '@suwujs/ui/ui.css'
 
 createApp(App).use(XUI).mount('#app')
 ```
@@ -28,7 +28,7 @@ createApp(App).use(XUI).mount('#app')
 ```ts twoslash {7-9}
 // uno.config.ts
 import { defineConfig } from 'unocss'
-import { presetXui } from '@suwjs/preset'
+import { presetXui } from '@suwujs/preset'
 
 export default defineConfig({
   presets: [

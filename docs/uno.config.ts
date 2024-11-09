@@ -1,5 +1,5 @@
 import { defineConfig, transformerDirectives, transformerVariantGroup } from 'unocss'
-import { presetXui } from '@suwjs/preset'
+import { presetXui } from '@suwujs/preset'
 
 export default defineConfig({
   envMode: 'dev',

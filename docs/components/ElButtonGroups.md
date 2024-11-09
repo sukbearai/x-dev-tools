@@ -11,13 +11,13 @@ outline: deep
 ### <i i-carbon:use-case-usage /> Usage
 
 ```ts
-import XUI from '@suwjs/ui'
+import XUI from '@suwujs/ui'
 import { createApp } from 'vue'
 import App from './App.vue'
 import 'uno.css'
-import '@suwjs/ui/ui.css'
+import '@suwujs/ui/ui.css'
 // 添加 Element UI Plus 样式,如果你的项目已经全量安装了element-ui-plus可以不用添加这行代码
-import '@suwjs/ui/element-ui-plus.css' // [!code ++]
+import '@suwujs/ui/element-ui-plus.css' // [!code ++]
 
 createApp(App).use(XUI).mount('#app')
 ```
