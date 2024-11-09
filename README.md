@@ -22,7 +22,7 @@ pnpm add x-dev-tools
 
 |名称|描述|
 |---|---|
-|[@dev-tools/logger](https://codeup.aliyun.com/65b1ff4d4c71a8d0b0f29a4b/project/scientific_research_manager/x-dev-tools/tree/main/packages/logger)| 日志包 |
-|[@dev-tools/ui](https://codeup.aliyun.com/65b1ff4d4c71a8d0b0f29a4b/project/scientific_research_manager/x-dev-tools/tree/main/packages/preset)| 预设样式包 |
-|[@dev-tools/ui](https://codeup.aliyun.com/65b1ff4d4c71a8d0b0f29a4b/project/scientific_research_manager/x-dev-tools/tree/main/packages/ui)| 物料包 |
-|[@dev-tools/ui](https://codeup.aliyun.com/65b1ff4d4c71a8d0b0f29a4b/project/scientific_research_manager/x-dev-tools/tree/main/packages/utils)| 工具包 |
+|[@dev-tools/logger](https://github.com/sukbearai/x-dev-tools/blob/main/packages/logger)| 日志包 |
+|[@dev-tools/ui](https://github.com/sukbearai/x-dev-tools/blob/main/packages/preset)| 预设样式包 |
+|[@dev-tools/ui](https://github.com/sukbearai/x-dev-tools/blob/main/packages/ui)| 物料包 |
+|[@dev-tools/ui](https://github.com/sukbearai/x-dev-tools/blob/main/packages/utils)| 工具包 |
