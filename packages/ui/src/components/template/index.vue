@@ -2,7 +2,7 @@
 import { templateProps } from './props'
 
 defineOptions({
-  name: 'OTemplate',
+  name: 'XTemplate',
 })
 
 defineProps(templateProps)

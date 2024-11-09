@@ -53,7 +53,7 @@ export default defineConfig({
 })
 ```
 
-现在你可以在 Vue 组件中使用 XUI 组件了
+现在你可以在 Vue 文件中使用 XUI 组件了
 
 ```vue
 <template>

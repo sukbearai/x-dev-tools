@@ -2,16 +2,8 @@ import type { DefaultTheme } from 'vitepress'
 import { defineConfig } from 'vitepress'
 
 const Components: DefaultTheme.SidebarItem[] = [
-  {
-    text: '基础',
-    collapsed: false,
-    items: [
-      { text: 'Button', link: '/components/button' },
-      { text: 'ElButtonGroups', link: '/components/ElButtonGroups' },
-      // { text: 'Link', link: '/components/link' },
-      // { text: 'Text', link: '/components/text' },
-    ],
-  },
+  { text: 'Button', link: '/components/button' },
+  { text: 'ElButtonGroups', link: '/components/ElButtonGroups' },
 ]
 
 // https://vitepress.dev/reference/site-config
@@ -22,6 +14,14 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
 
     sidebar: [
+      {
+        text: '快速开始',
+        link: '/guide/',
+      },
+      {
+        text: '贡献指南',
+        link: '/guide/contribution/',
+      },
       {
         text: '组件',
         items: Components,
