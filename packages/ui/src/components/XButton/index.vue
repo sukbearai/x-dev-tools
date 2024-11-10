@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, useAttrs, useSlots } from 'vue'
-import { buttonProps } from './props'
+import { xButtonProps } from './props'
 import type { SizeType } from '@/composables/useProps'
 
 defineOptions({
@@ -8,7 +8,7 @@ defineOptions({
   inheritAttrs: false,
 })
 
-const props = defineProps(buttonProps)
+const props = defineProps(xButtonProps)
 
 defineSlots<{
   default: (props: unknown) => any

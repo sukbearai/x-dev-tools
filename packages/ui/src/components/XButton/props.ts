@@ -3,7 +3,7 @@ import { disabled, loadable, readonly, sizeable } from '@/composables/useProps'
 
 export type ButtonVariants = 'default' | 'soft' | 'outline' | 'solid' | 'solid-cover' | 'dashed' | 'dashed-cover' | 'link' | 'ghost' | 'ghost-light'
 
-export const buttonProps = {
+export const xButtonProps = {
   to: String,
   rounded: Boolean,
   icon: String,
@@ -15,10 +15,10 @@ export const buttonProps = {
   variant: { type: String as PropType<ButtonVariants> },
 }
 
-export const buttonGroupProps = {
-  size: buttonProps.size,
+export const xButtonGroupProps = {
+  size: xButtonProps.size,
   spacer: Boolean,
 }
 
-export type XButtonProps = ExtractPropTypes<typeof buttonProps>
-export type XButtonGroupProps = ExtractPropTypes<typeof buttonGroupProps>
+export type XButtonProps = ExtractPropTypes<typeof xButtonProps>
+export type XButtonGroupProps = ExtractPropTypes<typeof xButtonGroupProps>

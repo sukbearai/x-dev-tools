@@ -14,6 +14,13 @@
 pnpm add x-dev-tools
 ```
 
+## 文档
+
+```bash
+# cd /docs
+pnpm run docs:dev
+```
+
 ## Packages
 
 |名称|描述|

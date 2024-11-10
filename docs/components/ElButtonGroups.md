@@ -4,7 +4,7 @@ outline: deep
 
 # ElButtonGroups
 
-创建基于Element UI plus的物料组件。
+创建基于Element plus的物料组件示例
 
 ## <i i-logos-unocss /> With Element UI Plus
 

@@ -16,83 +16,95 @@ outline: deep
 2. 根目录下执行 `pnpm i `,在 `packages/ui` 下执行`pnpm run dev`开启调试模式
 3. 在 `examples/vite-xui-vue` 下执行 `pnpm run dev` 会自动导入你的组件进行调试
 
-## 添加一个组件的完整流程
+## 添加一个组件的完整示例
 
 编写组件props
 
 ```ts
+// packages/ui/components/XButton/props.ts
 import type { ExtractPropTypes } from 'vue'
 import { disabled, loadable, readonly, sizeable } from '@/composables/useProps'
 
-export const templateProps = {
+export const xButtonProps = {
   size: sizeable,
   disabled,
   readonly,
   loading: loadable,
 }
 
-export type XTemplateProps = ExtractPropTypes<typeof templateProps>
+export type XButtonProps = ExtractPropTypes<typeof buttonProps>
 ```
 
 编写Vue SFC
 
 ```vue
 <script lang='ts' setup>
-import { templateProps } from './props'
+// packages/ui/components/XButton/index.vue
+import { xButtonProps } from './props'
 
 defineOptions({
-  name: 'XTemplate',
+  name: 'XButton',
 })
 
-defineProps(templateProps)
+defineProps(xButtonProps)
 </script>
 
 <template>
-  <div>
-    <h1>Template</h1>
-  </div>
+  <button class="btn btn-dashed">
+    按钮
+  </button>
 </template>
 ```
 
 导出组件
 
-packages/ui/components/template/index.ts
-
 ```ts
+// packages/ui/components/XButton/index.ts
 import { withInstall } from '@x-dev-tools/utils'
-import Template from './index.vue'
+import Button from './index.vue'
 
-export const XTemplate = withInstall(Template)
+export const XButton = withInstall(Button)
 
 export * from './props'
 ```
 
-packages/ui/components/index.ts
+从入口文件导出
 
 ```ts
+// packages/ui/components/index.ts
 import type { Plugin } from 'vue'
-import { XButton } from './button'
-import { XTemplate } from './template'
+import { XButton } from './XButton'
 
 export default [
   XButton,
-  XTemplate,
   // 其他组件
 ] as unknown as Plugin[]
 ```
 
 ## 添加组件文档
 
-在 `docs/components` 下创建`组件名.md`文件，文件内容参考`docs/components/button.md`文件
+在 `docs/components` 下创建`button.md`文件，文件内容参考`docs/components/button.md`文件
+
+```ts
+// docs/.vitepress/config.mts
+// 在侧边栏添加你的组件
+const Components: DefaultTheme.SidebarItem[] = [
+  { text: 'Button', link: '/components/button' },
+]
+```
 
 ## 发布组件
 
 切换到`main`分支,根目录执行`pnpm run release`发布组件，根据命令行提示变更版本号，填写y确认发包
+
+> 默认发包规则是全量发包，即便某个子包没有修改也会变更版本号，这是为了保证简单和保持代码新鲜
 
 ## 在项目中更新依赖
 
 更新依赖命令
 
 ```bash [pnpm]
+# 根目录更新
 pnpm update @x-dev-tools/ui@latest
+# pnpm update @x-dev-tools/其他包@latest
 ```
