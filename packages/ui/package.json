@@ -18,8 +18,7 @@
       "import": "./dist/index.es.js",
       "require": "./dist/index.umd.js"
     },
-    "./ui.css": "./dist/ui.css",
-    "./element-ui-plus.css": "./dist/style.css",
+    "./ui.css": "./dist/index.css",
     "./*": {
       "types": "./dist/*.d.ts",
       "import": "./dist/*.js"

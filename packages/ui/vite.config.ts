@@ -21,6 +21,7 @@ export default defineConfig({
     },
   },
   build: {
+    cssCodeSplit: true,
     lib: {
       entry: r('src/index.ts'),
       name: '@suwujs/ui',
