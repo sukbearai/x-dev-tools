@@ -8,7 +8,6 @@ import XUI from '@suwujs/ui'
 import 'floating-vue/dist/style.css'
 import '@shikijs/vitepress-twoslash/style.css'
 import '@suwujs/ui/ui.css'
-import '@suwujs/ui/element-ui-plus.css'
 import 'uno.css'
 
 export default {
