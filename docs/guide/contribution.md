@@ -5,7 +5,7 @@ outline: deep
 ## 规范
 
 1. 创建`feature/组件名`分支添加你的组件，组件名必须大写 X 开头
-2. 在`packages/ui`下创建`components/组件名`文件夹,样板代码参考`packages/ui/components/template`或者`packages/ui/components/button`
+2. 在`packages/ui`下创建`components/组件名`文件夹,样板代码参考`packages/ui/components/template`或者`packages/ui/components/XButton`
 3. 开发完组件后合并代码到`main`分支统一发包
 
 > 如果你开发的组件是基于 Element Plus 那么它的组件是需要手动导入的,便于使用 ES Module 的 Tree Shaking 功能
