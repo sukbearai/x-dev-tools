@@ -1,12 +1,12 @@
 <script lang='ts' setup>
 import { ElButton } from 'element-plus'
-import { elButtonGroupsProps } from './props'
+import { xElButtonGroupsProps } from './props'
 
 defineOptions({
   name: 'XElButtonGroups',
 })
 
-defineProps(elButtonGroupsProps)
+defineProps(xElButtonGroupsProps)
 </script>
 
 <template>
