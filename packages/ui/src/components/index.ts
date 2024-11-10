@@ -1,6 +1,6 @@
 import type { Plugin } from 'vue'
 import { XButton } from './XButton'
-import { XElButtonGroups } from './el-button-groups'
+import { XElButtonGroups } from './XElButtonGroups'
 
 export default [
   XButton,
