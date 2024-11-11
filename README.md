@@ -11,7 +11,10 @@
 ## 安装
 
 ```bash
-pnpm add x-dev-tools
+# 确保 pnpm升级到 9.8.0 以上 npm i -g pnpm@latest
+pnpm i
+
+pnpm run build  # 开发子包使用pnpm run dev
 ```
 
 ## 文档
