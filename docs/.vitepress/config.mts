@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 const Components: DefaultTheme.SidebarItem[] = [
   { text: 'Button', link: '/components/button' },
   { text: 'ElButtonGroups', link: '/components/ElButtonGroups' },
+  { text: 'ElUpload', link: '/components/ElUpload' },
 ]
 
 // https://vitepress.dev/reference/site-config

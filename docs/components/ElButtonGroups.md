@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# ElButtonGroups
+# XElButtonGroups
 
 创建基于Element plus的物料组件示例
 

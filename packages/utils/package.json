@@ -37,6 +37,7 @@
     "dev": "unbuild --stub"
   },
   "dependencies": {
-    "vue": "catalog:"
+    "vue": "catalog:",
+    "xlsx": "^0.18.5"
   }
 }

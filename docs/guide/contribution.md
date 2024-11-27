@@ -60,7 +60,7 @@ defineProps(xButtonProps)
 
 ```ts
 // packages/ui/components/XButton/index.ts
-import { withInstall } from '@x-dev-tools/utils'
+import { withInstall } from '@suwujs/utils'
 import Button from './index.vue'
 
 export const XButton = withInstall(Button)
@@ -105,6 +105,6 @@ const Components: DefaultTheme.SidebarItem[] = [
 
 ```bash [pnpm]
 # 根目录更新
-pnpm update @x-dev-tools/ui@latest
-# pnpm update @x-dev-tools/其他包@latest
+pnpm update @suwujs/ui@latest
+# pnpm update @suwujs/其他包@latest
 ```

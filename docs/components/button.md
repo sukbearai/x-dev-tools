@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# Button
+# XButton
 
 创建具有图标或链接功能的按钮。
 

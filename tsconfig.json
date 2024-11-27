@@ -3,7 +3,8 @@
     "target": "es2018",
     "jsx": "preserve",
     "lib": [
-      "esnext"
+      "esnext",
+      "dom"
     ],
     "module": "esnext",
     "moduleResolution": "Bundler",
