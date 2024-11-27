@@ -67,45 +67,118 @@ function formatExcelJsonToTableData<T = unknown>(data: ArrayBuffer): SheetTable<
   sheetNames.forEach((sheetName) => {
     const worksheet = workbook.Sheets[sheetName]
     if (RANGE_KEY in worksheet) {
+      // 处理数字和日期格式
       Object.keys(worksheet).forEach((key) => {
         // eslint-disable-next-line regexp/no-unused-capturing-group
         const regexp = /^[+-]?\d+(\.\d+)?e[+-]?\d+$/i // 匹配科学计数法
 
-        if (worksheet[key].t === 'd' || worksheet[key].t === 'n' && String(worksheet[key].v).trim() !== worksheet[key].w.trim() && !regexp.test(worksheet[key].w.trim())) {
+        if (worksheet[key].t === 'd' || worksheet[key].t === 'n'
+          && String(worksheet[key].v).trim() !== worksheet[key].w.trim()
+          && !regexp.test(worksheet[key].w.trim())) {
           const formattedV = Number(worksheet[key].v).toFixed(8)
           const formattedW = Number.parseFloat(worksheet[key].w).toFixed(8)
-          // 修复小数位数不一致的问题
           if (formattedV !== formattedW) {
             worksheet[key].v = parseDate(worksheet[key].v)
           }
         }
       })
 
-      // 解析合并单元格信息
+      // 合并单元格处理
       const merges = worksheet['!merges'] || []
+      const mergedCellValues = new Map()
+      const mergedRows = new Map<number, number>()
+      const mergedCols = new Map<number, number>()
 
+      // 收集合并信息
       merges.forEach((merge) => {
-        const { s, e } = merge // s: start, e: end
-        const startCell = XLSX.utils.encode_cell(s)
-        const cellValue = worksheet[startCell].v
+        // 行合并
+        if (merge.s.r !== merge.e.r) {
+          mergedRows.set(merge.s.r - 1, merge.e.r - 1)
+        }
+        // 列合并
+        if (merge.s.c !== merge.e.c) {
+          mergedCols.set(merge.s.c, merge.e.c)
+        }
+      })
 
-        for (let row = s.r; row <= e.r; row++) {
-          for (let col = s.c; col <= e.c; col++) {
-            const cellAddress = XLSX.utils.encode_cell({ r: row, c: col })
-            worksheet[cellAddress] = { v: cellValue }
+      // 处理合并单元格的值
+      merges.forEach((merge) => {
+        const { s, e } = merge
+        const startCell = XLSX.utils.encode_cell(s)
+        const startCellData = worksheet[startCell]
+
+        if (startCellData) {
+          for (let row = s.r; row <= e.r; row++) {
+            for (let col = s.c; col <= e.c; col++) {
+              const cellAddress = XLSX.utils.encode_cell({ r: row, c: col })
+              mergedCellValues.set(cellAddress, {
+                value: startCellData.v,
+                type: startCellData.t,
+                formatted: startCellData.w,
+              })
+            }
+          }
+        }
+      })
+
+      // 应用合并单元格的值
+      mergedCellValues.forEach((value, cellAddress) => {
+        if (!worksheet[cellAddress]) {
+          worksheet[cellAddress] = {
+            v: value.value,
+            t: value.type,
+            w: value.formatted,
           }
         }
       })
 
       const columns = getHeaderRow(worksheet) || []
-      let data = XLSX.utils.sheet_to_json<T>(worksheet, { header: 1, defval: null, range: 1 }) || []
+      const rawData = XLSX.utils.sheet_to_json<T>(worksheet, {
+        header: 1,
+        defval: null,
+        range: 1,
+      }) || []
 
-      // 过滤全是null的行
-      data = data.filter(row => (row as unknown[]).some(cell => cell !== null))
+      // 处理数据，合并重复的列
+      const data = rawData.map((row) => {
+        const newRow: unknown[] = []
+        if (Array.isArray(row)) {
+          let skipTo = -1
+          row.forEach((cell, colIndex) => {
+            if (colIndex <= skipTo)
+              return
+
+            for (const [startCol, endCol] of mergedCols.entries()) {
+              if (colIndex === startCol) {
+                newRow.push(cell)
+                skipTo = endCol
+                return
+              }
+            }
+
+            if (colIndex > skipTo) {
+              newRow.push(cell)
+            }
+          })
+        }
+        return newRow
+      })
+
+      // 过滤重复的合并行和空行
+      const filteredData = data.filter((row, index) => {
+        // 检查是否是需要过滤的合并行
+        for (const [startRow, endRow] of mergedRows.entries()) {
+          if (index > startRow && index <= endRow) {
+            return false
+          }
+        }
+        // 过滤空行
+        return (row as unknown[]).some(cell => cell !== null)
+      })
 
       sheetTable.push({
         columns,
-        data,
+        data: filteredData as T[],
       })
     }
   })
