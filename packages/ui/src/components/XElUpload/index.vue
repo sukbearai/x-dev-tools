@@ -1,43 +1,42 @@
 <script lang='ts' setup>
-import { ref, useAttrs } from 'vue'
+import { computed, ref } from 'vue'
 import { ElButton, ElUpload } from 'element-plus'
-import type { UploadFile, UploadInstance } from 'element-plus'
+import type { UploadFile, UploadFiles, UploadInstance } from 'element-plus'
 import { parseExcel } from '@suwujs/utils'
-import { xElUploadProps } from './props'
+import type { XElUploadProps } from './props'
 
 defineOptions({
   name: 'XElUpload',
 })
 
-const props = defineProps(xElUploadProps)
-
-defineSlots<{
-  trigger: () => any
-  tip: () => any
-}>()
+const props = withDefaults(defineProps<XElUploadProps>(), {})
 
 const uploadRef = ref<UploadInstance>()
-const attrs = useAttrs()
 
-async function handleChange(file: UploadFile) {
+// 处理文件变化
+async function handleChange(uploadFile: UploadFile, uploadFiles: UploadFiles) {
   try {
-    const data = await parseExcel(file.raw!)
-    // 发送解析成功事件
+    const data = await parseExcel(uploadFile.raw!)
     props.onParseExcelSuccess?.(data)
+    props.onChange?.(uploadFile, uploadFiles)
   }
   catch (error) {
     console.error('Parse excel failed:', error)
+    props.onParseExcelFailed?.(error)
   }
 }
+
+// 合并默认属性和透传属性
+const uploadAttrs = computed(() => ({
+  ...props,
+  onChange: handleChange,
+}))
 </script>
 
 <template>
   <ElUpload
     ref="uploadRef"
-    :auto-upload="false"
-    v-bind="attrs"
-    action="#"
-    :on-change="handleChange"
+    v-bind="uploadAttrs"
   >
     <template #trigger>
       <slot name="trigger">

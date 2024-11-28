@@ -1,15 +1,6 @@
-import type { ExtractPropTypes } from 'vue'
-import { disabled, loadable, readonly, sizeable } from '@/composables/useProps'
+import type { UploadProps } from 'element-plus'
 
-export const xElUploadProps = {
-  size: sizeable,
-  disabled,
-  readonly,
-  loading: loadable,
-  onParseExcelSuccess: {
-    type: Function,
-    default: () => {},
-  },
+export interface XElUploadProps extends UploadProps {
+  onParseExcelSuccess?: (data: any) => void
+  onParseExcelFailed?: (err: any) => void
 }
-
-export type XElUploadProps = ExtractPropTypes<typeof xElUploadProps>
