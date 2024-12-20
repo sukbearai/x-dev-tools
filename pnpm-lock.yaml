@@ -288,6 +288,9 @@ importers:
       element-plus:
         specifier: 'catalog:'
         version: 2.8.7(vue@3.5.12(typescript@5.5.4))
+      unplugin-vue-components:
+        specifier: ^0.27.4
+        version: 0.27.4(@babel/parser@7.26.2)(@nuxt/kit@3.14.159(magicast@0.3.5)(rollup@4.21.2)(webpack-sources@3.2.3))(rollup@4.21.2)(vue@3.5.12(typescript@5.5.4))
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: 'catalog:'
