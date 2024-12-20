@@ -45,6 +45,7 @@
     "uno-watch": "unocss -w"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
     "@suwujs/preset": "workspace:*",
     "@suwujs/utils": "workspace:*",
     "element-plus": "catalog:"

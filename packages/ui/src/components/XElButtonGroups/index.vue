@@ -12,7 +12,7 @@ defineProps(xElButtonGroupsProps)
 <template>
   <div class="mb-4">
     <ElButton>Default</ElButton>
-    <ElButton type="primary">
+    <ElButton type="primary" icon="download">
       Primary
     </ElButton>
     <ElButton type="success">
