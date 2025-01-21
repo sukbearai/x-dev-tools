@@ -26,7 +26,7 @@
   ],
   "scripts": {
     "postinstall": "pnpm run dev:prepare",
-    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare ../../apps/my-app",
+    "dev:prepare": "tsx scripts/prepare.ts",
     "prepack": "nuxt-module-build build",
     "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
     "lint": "eslint .",
@@ -46,6 +46,7 @@
     "@types/node": "latest",
     "changelogen": "^0.5.7",
     "nuxt": "catalog:",
+    "tsx": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:",
     "vue-tsc": "catalog:"

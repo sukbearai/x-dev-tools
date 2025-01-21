@@ -19,6 +19,7 @@ catalog:
   '@unocss/preset-icons': ^0.64.0
   '@vitejs/plugin-vue': ^5.1.4
   '@vueuse/core': ^11.2.0
+  tsx: ^4.19.2
   magic-color: ^2.0.0
   element-plus: ^2.8.7
   unplugin-auto-import: ^0.18.3
