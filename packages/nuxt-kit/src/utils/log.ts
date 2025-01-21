@@ -1,4 +1,4 @@
 import { useLogger } from '@suwujs/logger'
-import type { Consola } from 'consola'
+import type { ConsolaInstance } from 'consola'
 
-export const logger: Consola = useLogger('nuxt-kit')
+export const logger: ConsolaInstance = useLogger('nuxt-kit')
