@@ -11,7 +11,8 @@
 ## 安装
 
 ```bash
-# 确保 pnpm升级到 9.8.0 以上 npm i -g pnpm@latest
+corepack enable
+
 pnpm i
 
 pnpm run build  # 开发子包使用pnpm run dev
@@ -32,4 +33,4 @@ pnpm run docs:dev
 |[@suwujs/preset](https://github.com/sukbearai/x-dev-tools/blob/main/packages/preset)| 预设样式包 |
 |[@suwujs/ui](https://github.com/sukbearai/x-dev-tools/blob/main/packages/ui)| 物料包 |
 |[@suwujs/utils](https://github.com/sukbearai/x-dev-tools/blob/main/packages/utils)| 工具包 |
-|[@x-dev-tools/nuxt-kit](https://github.com/sukbearai/x-dev-tools/blob/main/packages/nuxt-kit)| nuxt kit模块 |
+|[@suwujs/nuxt-kit](https://github.com/sukbearai/x-dev-tools/blob/main/packages/nuxt-kit)| nuxt kit模块 |
