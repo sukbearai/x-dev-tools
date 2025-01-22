@@ -1,7 +1,7 @@
 {
   "name": "@suwujs/utils",
   "type": "module",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "x-dev-tools utils library",
   "author": "suk.bear <suk.bear.suwu@gamil.com>",
   "license": "MIT",
