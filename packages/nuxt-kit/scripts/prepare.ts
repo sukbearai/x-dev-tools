@@ -2,7 +2,7 @@ import { dirname, resolve } from 'node:path'
 import { readdirSync, statSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { execa } from 'execa'
-import { logger } from '../src/utils/log'
+import { useLogger } from '@suwujs/logger'
 
 // 获取 __dirname 的 ESM 替代方案
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -21,7 +21,7 @@ async function main() {
     if (statSync(appPath).isDirectory()) {
       try {
         if (statSync(nuxtConfigPath).isFile()) {
-          logger.log(`Preparing Nuxt app: ${app}`)
+          useLogger('nuxt-kit').log(`Preparing Nuxt app: ${app}`)
           await execa('nuxi', ['prepare'], {
             stdio: 'inherit',
             cwd: appPath,
