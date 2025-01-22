@@ -8,9 +8,7 @@
     ],
     "module": "esnext",
     "moduleResolution": "Bundler",
-    "paths": {
-      "@/*": ["./packages/ui/src/*"]
-    },
+    "paths": {},
     "resolveJsonModule": true,
     "types": [
       "node"
@@ -29,6 +27,8 @@
     "**/examples/**",
     "**/fixtures/**",
     "**/interactive/**",
-    "**/test/dts/**"
+    "**/test/dts/**",
+    "**/packages/cli/**",
+    "**/apps/**"
   ]
 }
