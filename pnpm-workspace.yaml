@@ -42,7 +42,7 @@ catalog:
   simple-git-hooks: ^2.11.1
   std-env: ^3.7.0
   taze: ^0.16.6
-  typescript: ^5.5.4
+  typescript: ~5.6
   unbuild: ^2.0.0
   vitepress: ^1.3.3
   vitepress-plugin-group-icons: ^1.0.3

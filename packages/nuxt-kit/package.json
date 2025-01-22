@@ -29,6 +29,7 @@
     "dev:prepare": "tsx scripts/prepare.ts",
     "prepack": "nuxt-module-build build",
     "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "build": "npm run prepack",
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch",
