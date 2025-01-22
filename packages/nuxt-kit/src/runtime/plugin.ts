@@ -1,6 +1,6 @@
-import { logger } from '../utils/log'
+import { useLogger } from '@suwujs/logger'
 import { defineNuxtPlugin } from '#app'
 
 export default defineNuxtPlugin((_nuxtApp) => {
-  logger.log('Plugin injected by @x-dev-tool/nuxt-kit!')
+  useLogger('nuxt-kit').log('Plugin injected by @x-dev-tool/nuxt-kit!')
 })

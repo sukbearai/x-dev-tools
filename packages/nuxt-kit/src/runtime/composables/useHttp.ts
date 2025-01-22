@@ -1,6 +1,6 @@
 import type { FetchError, FetchResponse, SearchParameters } from 'ofetch'
 import { hash } from 'ohash'
-import { logger } from '../../utils/log'
+import { useLogger } from '@suwujs/logger'
 import type { AsyncData, UseFetchOptions } from '#app'
 import type { KeysOf } from '#app/composables/asyncData'
 import { type Ref, isRef, useFetch, useRuntimeConfig } from '#imports'
@@ -46,7 +46,7 @@ function fetch<T>(url: UrlType, opts: HttpOption<T>): AsyncData<ResOptions<T>, F
     onRequest({ options }) {
       // Set the base URL
       options.baseURL = config.public.http.baseURL
-      logger.log(`fetch baseURL: ${options.baseURL}`)
+      useLogger('use-http').log(`fetch baseURL: ${options.baseURL}`)
     },
     // Response interception
     onResponse(_context) {
