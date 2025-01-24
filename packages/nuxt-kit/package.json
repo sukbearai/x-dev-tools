@@ -25,7 +25,7 @@
     "dist"
   ],
   "scripts": {
-    "postinstall": "pnpm run dev:prepare",
+    "postinstall": "pnpm --filter @suwujs/logger build && pnpm run dev:prepare",
     "dev:prepare": "tsx scripts/prepare.ts",
     "prepack": "nuxt-module-build build",
     "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",

@@ -33,9 +33,6 @@ jobs:
       - name: Install Dependencies
         run: pnpm i --ignore-scripts
 
-      - name: Build logger
-        run: pnpm --filter @suwujs/logger build
-
       - name: Run postinstall scripts
         run: pnpm -r run postinstall
 
