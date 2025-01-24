@@ -1,7 +1,7 @@
 {
   "name": "@suwujs/logger",
   "type": "module",
-  "version": "0.100.1",
+  "version": "0.100.2",
   "description": "dev logger",
   "author": "suk.bear <suk.bear.suwu@gamil.com>",
   "license": "MIT",
