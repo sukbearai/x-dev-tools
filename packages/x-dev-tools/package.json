@@ -1,7 +1,7 @@
 {
   "name": "@suwujs/x-dev-tools",
   "type": "module",
-  "version": "0.100.3",
+  "version": "0.101.0",
   "description": "some basic developing tools",
   "author": "suk.bear <suk.bear.suwu@gmail.com>",
   "license": "MIT",
