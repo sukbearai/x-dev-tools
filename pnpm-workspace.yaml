@@ -4,6 +4,8 @@ packages:
   - apps/**
   - packages/**
   - examples/*
+  - '!packages/x-dev-tools/templates/**'
+
 catalog:
   '@antfu/eslint-config': ^3.0.0
   '@iconify-json/carbon': ^1.1.37

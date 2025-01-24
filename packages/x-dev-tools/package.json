@@ -28,21 +28,39 @@
     "./utils": {
       "types": "./dist/utils.d.ts",
       "default": "./dist/utils.mjs"
+    },
+    "./cli": {
+      "types": "./dist/cli.d.ts",
+      "default": "./dist/cli.mjs"
     }
   },
   "main": "dist/index.mjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "bin": {
+    "x-dev-tools": "./dev/bin.ts"
+  },
+  "publishConfig": {
+    "bin": {
+      "x-dev-tools": "./bin/x-dev-tools.js"
+    }
+  },
   "files": [
-    "dist"
+    "bin",
+    "dist",
+    "templates"
   ],
   "scripts": {
     "build": "unbuild",
     "dev": "unbuild --stub"
   },
   "dependencies": {
+    "@inquirer/prompts": "^7.2.3",
     "@suwujs/logger": "workspace:*",
     "@suwujs/preset": "workspace:*",
-    "@suwujs/utils": "workspace:*"
+    "@suwujs/utils": "workspace:*",
+    "consola": "catalog:",
+    "fs-extra": "^11.3.0",
+    "tsx": "catalog:"
   }
 }
