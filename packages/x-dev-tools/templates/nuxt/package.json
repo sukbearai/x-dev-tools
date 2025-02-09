@@ -1,8 +1,8 @@
 {
   "name": "nuxt-app",
-  "private": true,
-  "version": "0.1.17",
   "type": "module",
+  "version": "0.1.17",
+  "private": true,
   "scripts": {
     "build": "nuxt build",
     "build:dev": "nuxt build --dotenv .env.dev",
