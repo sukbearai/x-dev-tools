@@ -38,7 +38,7 @@ const { isDragOver, dropPosition, handleDragStart, handleDragOver, handleDragLea
 }
 
 .is-over {
-  background: #F1F5F9;
+  background: transparent;
 }
 
 .drop--1::before {
