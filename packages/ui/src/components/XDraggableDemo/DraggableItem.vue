@@ -31,7 +31,6 @@ const { isDragOver, dropPosition, handleDragStart, handleDragOver, handleDragLea
 <style scoped>
 .drag-item {
   padding: 10px 15px;
-  background: #fff;
   border: 1px solid #ddd;
   margin: 5px 0;
   cursor: move;
@@ -39,7 +38,7 @@ const { isDragOver, dropPosition, handleDragStart, handleDragOver, handleDragLea
 }
 
 .is-over {
-  background: #f5f5f5;
+  background: #F1F5F9;
 }
 
 .drop--1::before {
