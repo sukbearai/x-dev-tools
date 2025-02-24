@@ -36,7 +36,8 @@
     "test:types": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit"
   },
   "dependencies": {
-    "@nuxt/kit": "catalog:"
+    "@nuxt/kit": "catalog:",
+    "jspdf": "^3.0.0"
   },
   "devDependencies": {
     "@nuxt/devtools": "catalog:",
