@@ -10,7 +10,9 @@
     "build": "rimraf packages/*/dist --glob && pnpm -r --filter=./packages/* run build",
     "dev": "rimraf packages/*/dist --glob && pnpm -r --filter=./packages/* --filter=!./packages/robot --filter=!./packages/nuxt run dev",
     "release": "bumpp -r",
-    "deploy": "tsx scripts/deploy.ts"
+    "deploy": "tsx scripts/deploy.ts",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:",

@@ -59,8 +59,13 @@
     "@suwujs/logger": "workspace:*",
     "@suwujs/preset": "workspace:*",
     "@suwujs/utils": "workspace:*",
+    "ali-oss": "^6.22.0",
     "consola": "catalog:",
+    "dotenv": "^16.4.7",
     "fs-extra": "^11.3.0",
     "tsx": "catalog:"
+  },
+  "devDependencies": {
+    "@types/ali-oss": "^6.16.11"
   }
 }
