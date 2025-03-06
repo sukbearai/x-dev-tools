@@ -1,7 +1,7 @@
 {
   "name": "@suwujs/preset",
   "type": "module",
-  "version": "0.102.0",
+  "version": "0.102.1",
   "description": " css rules for unocss preset",
   "author": "suk.bear <suk.bear.suwu@gamil.com>",
   "license": "MIT",
